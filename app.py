@@ -307,11 +307,13 @@ if df_filtered.empty:
 # =========================================================
 col_big, col1, col2, col3 = st.columns([1.4, 1, 1, 1])
 
-metric_card(col_big, "👥", "Total Responden (Terfilter)", f"{len(df_filtered)} orang", BRAND_DARK)
+metric_card(col_big, "👥", "Total Responden", f"{len(df_filtered)} orang", BRAND_DARK)
 metric_card(col1, "💬", "Total Ulasan Scraping", f"{len(df_ulasan)}")
 metric_card(
-    col2, "🎯", "Rata-rata Skor Y (Efektivitas)",
-    f"{df_filtered[VARIABEL_ITEMS['Y']].mean().mean():.2f} / 5",
+    col2,
+    "🎯",
+    "Rata-rata Skor Keseluruhan",
+    f"{sum(df_filtered[cols].mean().mean() for cols in VARIABEL_ITEMS.values()) / len(VARIABEL_ITEMS):.2f} / 5",
 )
 metric_card(col3, "⭐", "Rata-rata Rating Ulasan", f"{df_ulasan['score'].mean():.2f} / 5")
 
