@@ -354,6 +354,8 @@ tab1, tab2, tab3 = st.tabs(
     ["👥  Profil Responden", "📊  Hasil Kuesioner", "💬  Analisis Ulasan"]
 )
 
+st.markdown("<div style='margin-bottom:18px'></div>", unsafe_allow_html=True)
+
 # ---------- TAB 1: PROFIL RESPONDEN ----------
 with tab1:
     section_title("Demografi Responden")
