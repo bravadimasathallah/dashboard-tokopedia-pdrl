@@ -32,7 +32,7 @@ NEUTRAL_BG = "#0A3A20"
 PLOT_COLORWAY = ["#03AC0E", "#2E86DE", "#F5A623", "#DD5555"]
 
 # =========================================================
-# 2. CUSTOM CSS - INI YANG BIKIN TAMPILAN "NAIK KELAS"
+# 2. CUSTOM CSS
 # =========================================================
 st.markdown(
     f"""
@@ -140,7 +140,7 @@ st.markdown(
         filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
         flex-shrink: 0;
     }}
-    
+
     /* Section title dengan garis aksen */
     .section-title {{
         font-size: 1.05rem;
@@ -206,10 +206,8 @@ def section_title(text):
 
 @st.cache_data
 def get_base64_image(path):
-    """Baca file gambar lalu ubah jadi base64 supaya bisa ditempel di tag <img> HTML."""
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
-
 
 LOGO_BASE64 = get_base64_image("tokopedia_logo.png")
 
@@ -350,11 +348,9 @@ st.write("")
 # =========================================================
 # 8. TAB LAYOUT
 # =========================================================
-tab1, tab2, tab3 = st.tabs([
-    "👥 Profil Responden",
-    "📊 Hasil Kuesioner",
-    "💬 Analisis Ulasan"
-])
+tab1, tab2, tab3 = st.tabs(
+    ["👥  Profil Responden", "📊  Hasil Kuesioner", "💬  Analisis Ulasan"]
+)
 
 # ---------- TAB 1: PROFIL RESPONDEN ----------
 with tab1:
