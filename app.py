@@ -211,7 +211,7 @@ def get_base64_image(path):
         return base64.b64encode(f.read()).decode()
 
 
-LOGO_BASE64 = get_base64_image("assets/tokopedia_logo.png")
+LOGO_BASE64 = get_base64_image("tokopedia_logo.png")
 
 
 PLOT_TEMPLATE = "plotly_dark"
