@@ -6,6 +6,7 @@ Sumber data : database_tokopedia_pdrl.db (tabel_kuesioner & tabel_ulasan)
 """
 
 import sqlite3
+import base64
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -127,7 +128,19 @@ st.markdown(
         font-size: 0.92rem;
         color: white !important;
     }}
-
+    .hero-content {{
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+    }}
+    .hero-logo {{
+        width: 46px;
+        height: 46px;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+        flex-shrink: 0;
+    }}
+    
     /* Section title dengan garis aksen */
     .section-title {{
         font-size: 1.05rem;
@@ -189,6 +202,16 @@ def metric_card(col, icon, label, value, color="#ffffff"):
 
 def section_title(text):
     st.markdown(f'<div class="section-title">{text}</div>', unsafe_allow_html=True)
+
+
+@st.cache_data
+def get_base64_image(path):
+    """Baca file gambar lalu ubah jadi base64 supaya bisa ditempel di tag <img> HTML."""
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+
+LOGO_BASE64 = get_base64_image("assets/tokopedia_logo.png")
 
 
 PLOT_TEMPLATE = "plotly_dark"
@@ -289,10 +312,15 @@ st.sidebar.caption(f"Menampilkan **{len(df_filtered)}** dari {len(df_num)} respo
 # 6. HERO HEADER
 # =========================================================
 st.markdown(
-    """
+    f"""
     <div class="hero">
-        <h1>📊 Dashboard Kesiapan Teknologi Pengguna Aplikasi Tokopedia</h1>
-        <p>Kelompok 5 · Tema 10: Kesiapan Teknologi Pengguna</p>
+        <div class="hero-content">
+            <img src="data:image/png;base64,{LOGO_BASE64}" class="hero-logo" />
+            <div>
+                <h1>Dashboard Kesiapan Teknologi Pengguna Aplikasi Tokopedia</h1>
+                <p>Kelompok 5 · Tema 10: Kesiapan Teknologi Pengguna</p>
+            </div>
+        </div>
     </div>
     """,
     unsafe_allow_html=True,
