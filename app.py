@@ -152,34 +152,18 @@ st.markdown(
     }}
 
     /* Rapikan tab */
-    .stTabs [data-baseweb="tab-list"]{{
-        gap:0px;
-        border-bottom:1px solid rgba(255,255,255,.12);
+    .stTabs [data-baseweb="tab-list"] {{
+        gap: 6px;
     }}
-    .stTabs [data-baseweb="tab"]{{
-        height:42px;
-        padding:0 18px;
-        margin-right:6px;
-
-        background:transparent !important;
-
-        border:none;
-        border-bottom:3px solid transparent;
-
-        border-radius:0;
-
-        color:#d9d9d9 !important;
-        font-weight:600;
-
-        transition:.2s;
+    .stTabs [data-baseweb="tab"] {{
+        background-color: #0A3A20;
+        border-radius: 10px 10px 0 0;
+        padding: 8px 18px;
+        font-weight: 500;
     }}
-    .stTabs [data-baseweb="tab"]:hover{{
-        color:#ffffff !important;
-    }}
-    .stTabs [aria-selected="true"]{{
-        background:transparent !important;
-        color:#03AC0E !important;
-        border-bottom:3px solid #03AC0E !important;
+    .stTabs [aria-selected="true"] {{
+        background-color: {BRAND} !important;
+        color: white !important;
     }}
 
     section[data-testid="stSidebar"] {{
