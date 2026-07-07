@@ -322,7 +322,7 @@ st.markdown(
             <img src="data:image/png;base64,{LOGO_BASE64}" class="hero-logo" />
             <div>
                 <h1>Dashboard Kesiapan Teknologi Pengguna Aplikasi Tokopedia</h1>
-                <p>Kelompok 5 · Tema 10: Kesiapan Teknologi Pengguna</p>
+                <p>Kelompok 5 · Tema 10: Kesiapan Teknologi Pengguna kontollll</p>
             </div>
         </div>
     </div>
