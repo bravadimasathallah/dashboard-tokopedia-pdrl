@@ -153,7 +153,7 @@ st.markdown(
 
     /* Rapikan tab */
     .stTabs [data-baseweb="tab-list"] {{
-        gap: 6px;
+        gap: 10px;
     }}
     .stTabs [data-baseweb="tab"] {{
         background-color: #0A3A20;
