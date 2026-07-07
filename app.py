@@ -157,7 +157,7 @@ st.markdown(
     }}
     .stTabs [data-baseweb="tab"] {{
         background-color: #0A3A20;
-        border-radius: 10px 10px 0 0;
+        border-radius: 10px 10px 0 0 !important;
         padding: 8px 18px;
         font-weight: 500;
     }}
