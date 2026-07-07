@@ -153,23 +153,17 @@ st.markdown(
 
     /* Rapikan tab */
     .stTabs [data-baseweb="tab-list"] {{
-        gap: 8px;
+        gap: 6px;
     }}
     .stTabs [data-baseweb="tab"] {{
-        background-color: transparent !important;
-        border-radius: 6px !important;
-        padding: 8px 16px !important;
+        background-color: #0A3A20;
+        border-radius: 10px 10px 0 0;
+        padding: 8px 18px;
         font-weight: 500;
-        color: #cbd1cb !important;
-        border: none !important;
     }}
     .stTabs [aria-selected="true"] {{
-        background-color: #03AC0E !important;
-        color: #ffffff !important;
-    }}
-    .stTabs [data-baseweb="tab-highlight"],
-    .stTabs [data-baseweb="tab-border"] {{
-        display: none !important;
+        background-color: {BRAND} !important;
+        color: white !important;
     }}
 
     section[data-testid="stSidebar"] {{
