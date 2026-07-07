@@ -369,9 +369,11 @@ st.write("")
 # =========================================================
 # 8. TAB LAYOUT
 # =========================================================
-tab1, tab2, tab3 = st.tabs(
-    ["👥  Profil Responden", "📊  Hasil Kuesioner", "💬  Analisis Ulasan"]
-)
+tab1, tab2, tab3 = st.tabs([
+    "👥 Profil Responden",
+    "📊 Hasil Kuesioner",
+    "💬 Analisis Ulasan"
+])
 
 # ---------- TAB 1: PROFIL RESPONDEN ----------
 with tab1:
