@@ -492,7 +492,7 @@ with tab2:
 
 # ---------- TAB 3: ANALISIS ULASAN ----------
 with tab3:
-    section_title("Ulasan Pengguna dari Play Store / App Store")
+    section_title("Ulasan Pengguna dari Google Play Store")
     c1, c2 = st.columns([1.3, 1])
 
     with c1:
