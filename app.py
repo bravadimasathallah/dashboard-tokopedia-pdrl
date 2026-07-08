@@ -152,18 +152,39 @@ st.markdown(
     }}
 
     /* Rapikan tab */
+    .stTabs {{
+        margin-top: 1.4rem;
+    }}
     .stTabs [data-baseweb="tab-list"] {{
-        gap: 6px;
+        gap: 8px;
+        border-bottom: none;
     }}
     .stTabs [data-baseweb="tab"] {{
         background-color: #0A3A20;
-        border-radius: 10px 10px 0 0;
-        padding: 8px 18px;
+        border-radius: 999px;
+        padding: 10px 20px;
         font-weight: 500;
+        border: none;
+        transition: all 0.15s ease-in-out;
+    }}
+    .stTabs [data-baseweb="tab"]:hover {{
+        background-color: #0F4E2B;
+        color: white !important;
     }}
     .stTabs [aria-selected="true"] {{
         background-color: {BRAND} !important;
         color: white !important;
+        box-shadow: 0 4px 10px rgba(3,172,14,0.35);
+    }}
+    /* Hilangkan garis highlight bawaan (merah/oranye) di bawah tab aktif */
+    .stTabs [data-baseweb="tab-highlight"] {{
+        display: none;
+    }}
+    .stTabs [data-baseweb="tab-border"] {{
+        display: none;
+    }}
+    .stTabs [data-baseweb="tab-panel"] {{
+        padding-top: 1.2rem;
     }}
 
     section[data-testid="stSidebar"] {{
